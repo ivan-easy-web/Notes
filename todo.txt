@@ -1,0 +1,8 @@
+todo:
+
+done! notes list
++ add note detail view: it show the full note or appears to create new one
++ add reading & saving to local storage
+
+maby someday:
++ create a simple node.js server, save to database
