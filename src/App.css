@@ -1,0 +1,29 @@
+.noteslist {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.note {
+    background-color: bisque;
+    padding: 10px;
+    border-radius: 10px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plus-button {
+    background-color: lightgray;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
