@@ -40,3 +40,25 @@
     padding: 10px;
 }
 
+.search-field {
+    background-color: lightgray;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.search-field input {
+    width: calc(100% - 30px);
+    margin-left: 10px;
+    background: none;
+    border: none;
+    height: 2em;
+
+}
+
+.search-field input:focus {
+    outline: none;
+}

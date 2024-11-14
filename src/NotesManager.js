@@ -46,3 +46,10 @@ export const createEmptyNote = () => {
     date: new Date().toJSON().slice(0, 10),
   };
 };
+
+export const search = (notes, text) => {
+  if (text === "") return notes;
+  return notes.filter(note => {
+    return (note.header.includes(text) || note.text.includes(text))
+  })
+}

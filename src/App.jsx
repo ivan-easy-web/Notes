@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import NotesList from "./components/NotesList";
-import { readNotes, addNote, deleteNote, createEmptyNote } from "./NotesManager";
+import { readNotes, addNote, deleteNote, createEmptyNote, search } from "./NotesManager";
 import NoteView from "./components/NoteView";
 
 function App() {
