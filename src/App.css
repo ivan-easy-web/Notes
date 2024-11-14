@@ -27,3 +27,16 @@
     align-items: center;
     justify-content: center;
 }
+
+.noteview-container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.noteview {
+    background-color:bisque;
+    min-height: 500px;
+    border-radius: 10px;
+    padding: 10px;
+}
+

@@ -10,7 +10,14 @@ const Note = (props) => {
 
       <div className="note-footer">
         <small>{props.note.date}</small>
-        <MdDeleteForever className="delete-icon" size="1.3em" />
+        <MdDeleteForever
+          className="delete-icon"
+          size="1.3em"
+          onClick={(e) => {
+            props.deletePressed(props.note.id);
+            e.stopPropagation();
+          }}
+        />
       </div>
     </div>
   );

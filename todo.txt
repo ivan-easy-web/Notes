@@ -1,7 +1,10 @@
 todo:
 
 done! notes list
-+ add note detail view: it show the full note or appears to create new one
+done! add note detail view: it show the full note or appears to create new one
++ style noteview
++ add edit and delete functions to noteview
++ add search field
 + add reading & saving to local storage
 
 maby someday:
