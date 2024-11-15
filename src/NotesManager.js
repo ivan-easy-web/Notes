@@ -31,7 +31,7 @@ export const readNotes = () => {
 
 export const addNote = (notes, newNote) => {
   notes.push(newNote);
-  return notes;
+  return notes.map((x) => x);
 };
 
 export const deleteNote = (notes, deleteId) => {
