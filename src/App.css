@@ -13,6 +13,16 @@
     justify-content: space-between;
 }
 
+.notelist-header {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.notelist-text {
+    overflow: hidden;
+    max-height: 100px;
+}
+
 .note-footer {
     display: flex;
     justify-content: space-between;
@@ -20,7 +30,7 @@
 }
 
 .plus-button {
-    background-color: lightgray;
+    background-color: lightblue;
     height: 200px;
     border-radius: 10px;
     display: flex;
@@ -44,6 +54,7 @@
     background-color: lightgray;
     border: none;
     border-radius: 10px;
+    margin-top: 15px;
     margin-bottom: 15px;
     padding-left: 10px;
     display: flex;
@@ -61,4 +72,71 @@
 
 .search-field input:focus {
     outline: none;
+}
+
+.noteView-header {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+}
+
+.noteView-header div:nth-child(2) {
+    display: flex;
+}
+
+.noteView-header button {
+    border: none;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.noteView-header button:hover {
+    text-decoration: underline;
+}
+
+.noteview p {
+    text-wrap: wrap;
+    white-space: pre-line;
+}
+
+.editview {
+
+}
+
+.editview-header {
+    background: none;
+    border: none;
+    display: block;
+    width: 100%;
+    font-weight: inherit;
+    padding: inherit;
+}
+
+.editview-header:focus {
+    outline: none;
+}
+
+.editview-text {
+    background: none;
+    border: none;
+    display: block;
+    width: 100%;
+    font-weight: inherit;
+    padding: inherit;
+    white-space: pre-wrap;
+    min-height: 420px;
+}
+
+.editview-text:focus {
+    outline: none;
+}
+
+.noteview p {
+    margin-bottom: 8px;
+}
+
+.noteview .date {
+    font-weight: lighter;
 }

@@ -33,6 +33,7 @@ function App() {
   const savePressed = (newNote) => {
     setNotes(addNote(notes, newNote));
     setNoteToView(newNote);
+    console.log(newNote);
   };
 
   const deletePressed = (id) => {
@@ -46,7 +47,6 @@ function App() {
 
   return (
     <div>
-      <h3>Notes</h3>
       {!noteToView && (
         <NotesList
           notes={notes}

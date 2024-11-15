@@ -6,25 +6,25 @@ export const readNotes = () => {
       id: nanoid(),
       header: "First note",
       text: "This is a sample note. Create yours.",
-      date: "14.11.2024",
+      date: "2024-14-11",
     },
     {
       id: nanoid(),
       header: "Second note",
       text: "This is a sample note. Create yours.",
-      date: "14.11.2024",
+      date: "2024-14-11",
     },
     {
       id: nanoid(),
       header: "Third note",
       text: "This is a sample note. Create yours.",
-      date: "14.11.2024",
+      date: "2024-14-11",
     },
     {
       id: nanoid(),
       header: "Forth note",
       text: "This is a sample note. Create yours.",
-      date: "14.11.2024",
+      date: "2024-14-11",
     },
   ];
 };

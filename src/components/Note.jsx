@@ -1,16 +1,17 @@
-import { MdDeleteForever } from "react-icons/md";
+
+import { IoIosTrash } from "react-icons/io";
 
 const Note = (props) => {
   return (
     <div className="note">
       <div className="note-header">
-        <h3>{props.note.header}</h3>
-        <span>{props.note.text}</span>
+        <h3 className="notelist-header">{props.note.header}</h3>
+        <p className="notelist-text">{props.note.text}</p>
       </div>
 
       <div className="note-footer">
         <small>{props.note.date}</small>
-        <MdDeleteForever
+        <IoIosTrash
           className="delete-icon"
           size="1.3em"
           onClick={(e) => {
