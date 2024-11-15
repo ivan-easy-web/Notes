@@ -3,8 +3,9 @@ todo:
 done! notes list
 done! add note detail view: it show the full note or appears to create new one
 + style noteview
-+ add edit and delete functions to noteview
+done! add edit and delete functions to noteview
 done! add search field
+done! fix deleting when searching
 + add reading & saving to local storage
 
 maby someday:

@@ -49,7 +49,14 @@ export const createEmptyNote = () => {
 
 export const search = (notes, text) => {
   if (text === "") return notes;
-  return notes.filter(note => {
-    return (note.header.toLowerCase().includes(text.toLowerCase()) || note.text.toLowerCase().includes(text.toLowerCase()))
-  })
-}
+  return notes.filter((note) => {
+    return (
+      note.header.toLowerCase().includes(text.toLowerCase()) ||
+      note.text.toLowerCase().includes(text.toLowerCase())
+    );
+  });
+};
+
+export const updateNote = (notes, updatedNote) => {
+  return notes.map((note) => (note.id === updatedNote.id ? updatedNote : note));
+};

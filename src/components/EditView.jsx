@@ -18,6 +18,7 @@ const EditView = (props) => {
         <div className="noteview container-xl">
             <input type="text" value={header} onChange={e => setHeader(e.target.value)}></input>
             <input type="text" value={text} onChange={e => setText(e.target.value)}></input>
+            <button onClick={props.cancelPressed}>Cancel</button>
             <button onClick={() => props.savePressed(saveNote())}>Save</button>
         </div>
     )

@@ -1,39 +1,69 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./App.css";
 import NotesList from "./components/NotesList";
-import { readNotes, addNote, deleteNote, createEmptyNote, search } from "./NotesManager";
+import {
+  readNotes,
+  addNote,
+  deleteNote,
+  createEmptyNote,
+  search,
+  updateNote,
+} from "./NotesManager";
 import NoteView from "./components/NoteView";
 
 function App() {
   const [notes, setNotes] = useState(readNotes());
   const [noteToView, setNoteToView] = useState(null);
+  const view = useRef("view");
 
   const notePressed = (note) => {
     if (note) {
       setNoteToView(note);
+      view.current = "view";
     } else {
-      setNoteToView(createEmptyNote())
+      setNoteToView(createEmptyNote());
+      view.current = "add";
     }
-  }
+  };
 
   const backPressed = () => {
-    setNoteToView(null)
-  }
+    setNoteToView(null);
+  };
 
   const savePressed = (newNote) => {
-    setNotes(addNote(notes, newNote))
-    setNoteToView(newNote)
-  }
+    setNotes(addNote(notes, newNote));
+    setNoteToView(newNote);
+  };
 
   const deletePressed = (id) => {
-    setNotes(deleteNote(notes, id))
-  }
+    setNotes(deleteNote(notes, id));
+    setNoteToView(null);
+  };
+
+  const updatePressed = (updatedNote) => {
+    setNotes(updateNote(notes, updateNote));
+  };
 
   return (
     <div>
       <h3>Notes</h3>
-      {!noteToView && <NotesList notes={notes} notePressed={notePressed} deletePressed={deletePressed}/>}
-      {noteToView && <NoteView note={noteToView} backPressed={backPressed} savePressed={savePressed}/>}
+      {!noteToView && (
+        <NotesList
+          notes={notes}
+          notePressed={notePressed}
+          deletePressed={deletePressed}
+        />
+      )}
+      {noteToView && (
+        <NoteView
+          note={noteToView}
+          backPressed={backPressed}
+          savePressed={savePressed}
+          updatePressed={updatePressed}
+          view={view.current}
+          deletePressed={deletePressed}
+        />
+      )}
     </div>
   );
 }
