@@ -34,7 +34,7 @@ const NoteView = (props) => {
             <div>
               <button onClick={editPressed}>Edit</button>
               <button onClick={() => props.deletePressed(props.note.id)}>
-                <IoIosTrash size="1.3em" />
+                <IoIosTrash size="1.5em" />
               </button>
             </div>
           </div>

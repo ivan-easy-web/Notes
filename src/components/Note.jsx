@@ -17,6 +17,7 @@ const Note = (props) => {
           onClick={(e) => {
             props.deletePressed(props.note.id);
             e.stopPropagation();
+            e.preventDefault();
           }}
         />
       </div>
