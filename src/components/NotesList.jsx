@@ -22,7 +22,7 @@ const NotesList = (props) => {
       <SearchField searchEntered={searchEntered}></SearchField>
       <div className="row g-3">
         {notesToDisplay.map((note) => (
-          <div className="col-sm-12 col-md-6 col-lg-4 col-xxl-3" onClick={() => props.notePressed(note)}>
+          <div className="col-sm-12 col-md-6 col-lg-4 col-xxl-3" onClick={() => props.notePressed(note)} key={note.id}>
             <Note note={note} deletePressed={deletePressed}/>
           </div>
         ))}

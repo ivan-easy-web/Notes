@@ -6,7 +6,8 @@ done! style noteview
 done! add edit and delete functions to noteview
 done! add search field
 done! fix deleting when searching
-+ add reading & saving to local storage
+done! add reading & saving to local storage
+fix when adding a new note, useeffect doesnt update localstorage
 
 maby someday:
 + create a simple node.js server, save to database

@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./App.css";
 import NotesList from "./components/NotesList";
 import {
@@ -11,8 +11,12 @@ import {
 } from "./NotesManager";
 import NoteView from "./components/NoteView";
 
+let loadedNotes = JSON.parse(localStorage.getItem("notes"));
+
+if (!loadedNotes) loadedNotes = readNotes();
+
 function App() {
-  const [notes, setNotes] = useState(readNotes());
+  const [notes, setNotes] = useState(loadedNotes);
   const [noteToView, setNoteToView] = useState(null);
   const view = useRef("view");
 
@@ -33,7 +37,6 @@ function App() {
   const savePressed = (newNote) => {
     setNotes(addNote(notes, newNote));
     setNoteToView(newNote);
-    console.log(newNote);
   };
 
   const deletePressed = (id) => {
@@ -42,8 +45,12 @@ function App() {
   };
 
   const updatePressed = (updatedNote) => {
-    setNotes(updateNote(notes, updateNote));
+    setNotes(updateNote(notes, updatedNote));
   };
+
+  useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
 
   return (
     <div>
