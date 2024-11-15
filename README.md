@@ -1,3 +1,4 @@
-# React + Vite
+# Notes app
 
-Sample Notes application. Clean React.js, saves data to local storage.
+Simple Notes application. 
+Clean React.js, saves data to local storage.
